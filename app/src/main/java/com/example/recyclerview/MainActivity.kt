@@ -1,12 +1,10 @@
 package com.example.recyclerview
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerview.databinding.ActivityMainBinding
+import java.math.BigInteger
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,8 +22,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun fibonacci(n: Int): List<Int> {
-        val numbers = mutableListOf(0, 1)
+    fun fibonacci(n: Int): MutableList<BigInteger> {
+        val numbers = mutableListOf(BigInteger.ZERO, BigInteger.ONE)
         while (numbers.size < n) {
             numbers.add(numbers[numbers.lastIndex] + numbers[numbers.lastIndex - 1])
         }
